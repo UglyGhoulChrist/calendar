@@ -45,8 +45,8 @@ for (let index = quantityDaysPrevMonth; index > 0; index -= 1) {
   const day = new Date(year, month, 1 - index);
   numbersArr.push({
     number: day.getDate(),
-    month: "prev",
-    now: false,
+    nowMonth: false,
+    nowDay: false,
   });
 }
 
@@ -58,8 +58,8 @@ for (let index = 0; index < quantityDaysThisMonth; index += 1) {
   const day = new Date(year, month, index + 1);
   numbersArr.push({
     number: day.getDate(),
-    month: "this",
-    now: date === index + 1,
+    nowMonth: true,
+    nowDay: date === index + 1,
   });
 }
 
@@ -71,8 +71,8 @@ for (let index = 0; index < quantityDaysNextMonth; index += 1) {
   const day = new Date(year, month + 1, index + 1);
   numbersArr.push({
     number: day.getDate(),
-    month: "next",
-    now: false,
+    nowMonth: false,
+    nowDay: false,
   });
 }
 

@@ -26,7 +26,7 @@ function Month({ arrNumbersArr, nameDaysWeek }) {
               <td
                 key={index}
                 className={
-                  (el.month !== "this" && "ui-datepicker-other-month") ||
+                  (!el.nowMonth && "ui-datepicker-other-month") ||
                   (el.now && "ui-datepicker-today") ||
                   ""
                 }
