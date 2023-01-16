@@ -27,8 +27,8 @@ function Month({ arrNumbersArr, nameDaysWeek }) {
                 key={index}
                 className={
                   (!el.nowMonth && "ui-datepicker-other-month") ||
-                  (el.now && "ui-datepicker-today") ||
-                  ""
+                  (el.nowDay && "ui-datepicker-today") ||
+                  null
                 }
               >
                 {el.number}
